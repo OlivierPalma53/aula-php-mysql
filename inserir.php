@@ -21,7 +21,7 @@
     $stmt = $conn->prepare("INSERT INTO gafanhotos (nome, profissao, nascimento, sexo, peso, altura, nacionalidade) values (?,?,?,?,?,?,?)");
     $stmt->bind_param("ssssdds", $nome, $profissao, $nascimento, $sexo, $peso, $altura, $nacionalidade);
 
-    if($stmt->execute()){
+    if($stmt->execute() == true){
       echo '<div class="alert alert-success">Cadastro Inserido com sucesso.</div>';
     } else {
       echo '<div class="alert alert-danger">Erro ao cadastrar aluno.</div>';
