@@ -12,7 +12,7 @@
     $altura = isset($_POST['altura']) ? $_POST['altura']: null;
     $nacionalidade = isset($_POST['nacionalidade']) ? $_POST['nacionalidade']: null;
 
-    $conn = new mysqli("localhost","root","root","cadastro");
+    $conn = new mysqli("mysql796.umbler.com", "olivier", "a1b2c3d4", "cadastro_alunos");
 
     if($conn->connect_error){
       echo 'Erro: '.$conn->connect_error;
