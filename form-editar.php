@@ -11,7 +11,7 @@
 
     $user = $result->fetch_assoc();
 
-    $conn->close()
+    $conn->close();
   } else {
     header("Location: index.php");
   }
