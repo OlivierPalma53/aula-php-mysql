@@ -24,7 +24,7 @@ error_reporting(E_ALL);
       </thead>
       <?php
 
-        $conn = new mysqli("mysql796.umbler.com", "olivier", "a1b2c3d4", "cadastro_alunos");
+        $conn = new mysqli("localhost", "root", "root", "cadastro");
 
         if($conn->connect_error){
           echo 'Erro: '.$conn->connect_error;
@@ -45,7 +45,7 @@ error_reporting(E_ALL);
           echo "<td>".$row['altura']."</td>";
           echo "<td>".$row['nacionalidade']."</td>";
           echo "<td><a href='form-editar.php?id=".$row['id']."'><button class='btn btn-warning'>Editar</button></a></td>";
-          echo "<td><a href='excluir.php?id='".$row['id']."><button class='btn btn-danger'>Excluir</button></a></td>";
+          echo "<td><a href='excluir.php?id=".$row['id']."'><button class='btn btn-danger'>Excluir</button></a></td>";
           echo "</tr>";
         }
 
